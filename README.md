@@ -42,10 +42,10 @@ for subsequent invocations (see invoceation below this one). Note
 that a desktop license for the registered device must be purchased
 from Pushover before the device's five day trial expires.
 
-~/bin/pushover-control.py  --login_email=<your pushover login email> --login_pass=<your pushover password> --device_name=<your unregistered device name> --command_bin=<path to message processing command>
+~/bin/pushover-control.py  --login_email=[your pushover login email] --login_pass=[your pushover password] --device_name=[your unregistered device name] --command_bin=[path to message processing command]
 
 To invoke this program with a registered desktop device use the
 following command line.
 
-~/bin/pushover-control.py  --login_email=<your pushover login email> --login_pass=<your pushover password> --device_id=<your registered device ID> --command_bin=/usr/local/bin/heyu
+~/bin/pushover-control.py  --login_email=[your pushover login email] --login_pass=[your pushover password] --device_id=[your registered device ID] --command_bin=/usr/local/bin/heyu
 
