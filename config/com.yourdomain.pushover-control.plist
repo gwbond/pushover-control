@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC -//Apple Computer//DTD PLIST 1.0//EN http://www.apple.com/DTDs/PropertyList-1.0.dtd >
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.yourdomain.pushover-control</string>
+    <key>Program</key>
+    <string>/Users/admin/bin/pushover-control</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/admin/bin/pushover-control</string>
+        <string>--login_email</string>
+        <string>your-pushover-login-email</string>
+        <string>--login_pass</string>
+        <string>your-pushover-login-password</string>
+        <string>--device_id</string>
+        <string>your-pushover-device-id</string>
+        <string>--command_bin</string>
+	<string>absolute-path-to-command-executable</string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/tmp/pushover-control.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/pushover-control.log</string>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <dict>
+      <key>SuccessfulExit</key>
+      <false/>
+    </dict>
+  </dict>
+</plist>
