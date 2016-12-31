@@ -38,7 +38,7 @@
 # To invoke this program with an unregistered desktop device use the
 # following command line. Pushover will return a device ID for the
 # registered device. Be sure to record the ID, because it is needed
-# for subsequent invocations (see invoceation below this one). Note
+# for subsequent invocations (see invocation below this one). Note
 # that a desktop license for the registered device must be purchased
 # from Pushover before the device's five day trial expires.
 
@@ -47,7 +47,7 @@
 # To invoke this program with a registered desktop device use the
 # following command line.
 
-# ~/bin/pushover-control.py  --login_email=<your pushover login email> --login_pass=<your pushover password> --device_id=<your registered device ID> --command_bin=/usr/local/bin/heyu
+# ~/bin/pushover-control.py  --login_email=<your pushover login email> --login_pass=<your pushover password> --device_id=<your registered device ID> --command_bin=<path to message processing command>
 
 import argparse
 import json
@@ -132,6 +132,10 @@ def try_device_reg():
     if status:
         device_id = device_reg_response_data['id']
         log("Device ID for %s: %s" % ( args.device_name, device_id ))
+    else:
+        log("Exiting.")
+        # Exit normally to prevent launchd auto-restart.
+        sys.exit(0)
 
 def try_download():
     max_message_id = -1
