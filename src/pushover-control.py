@@ -68,7 +68,7 @@ websocket_url = "wss://client.pushover.net/push"
 # Globals
 secret = None
 ws = None
-exit = True
+exit = False
 device_id = None
 
 def log_date():
