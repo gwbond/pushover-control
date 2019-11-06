@@ -139,6 +139,7 @@ def try_device_reg():
 
 def try_download():
     max_message_id = -1
+    messages = []
     download_param_data = { 'secret': secret,
                             'device_id': device_id }
     download_error_string = "Outstanding messages download error"
